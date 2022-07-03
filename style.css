@@ -6,8 +6,46 @@
     --white: hsl(0, 0%, 100%);
     --basic-font-size: 14px;
 }
-*{
+
+.grid {
+    --columns: 345px;
+    --rows: 245px auto;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}   
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    height: 100%;
+    grid-template-columns: var(--columns);
+    grid-template-rows: var(--rows);
+    margin-top: 10px;
+    
+}
+
+.grid-image {
+    background-image: url('./images/image-product-mobile.jpg');
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.grid-productDescription{
+display: flex;
+flex-direction: column;
+}
